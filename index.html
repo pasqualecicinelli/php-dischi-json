@@ -23,6 +23,13 @@
   </head>
 
   <body>
-    <div id="app" class="container"></div>
+    <div id="app" class="container">
+      <div class="card" v-for="disco in listDischi">
+        <img :src="disco.poster" alt="" />
+        <h2>{{disco.title}}</h2>
+        <span>{{disco.author}}</span>
+        <span>{{disco.year}}</span>
+      </div>
+    </div>
   </body>
 </html>

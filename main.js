@@ -3,9 +3,16 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: "Hello Vue!",
+      listDischi: [],
     };
   },
 
-  mounted() {},
+  mounted() {
+    axios
+      .get("http://localhost/php-dischi-json/backend/data/dischi.php")
+      .then((response) => {
+        this.listDischi = response.data;
+        console.log(this.listDischi);
+      });
+  },
 }).mount("#app");
