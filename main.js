@@ -11,7 +11,7 @@ createApp({
   mounted() {
     // FROM JSON
     axios
-      .get("http://localhost/php-dischi-json/backend/data/dischi.json")
+      .get("http://localhost/php-dischi-json/backend/data/get-dischi-list.php")
       .then((response) => {
         this.listJson = response.data;
         console.log(this.listJson);
@@ -19,7 +19,7 @@ createApp({
 
     /* FROM PHP
     axios
-      .get("http://localhost/php-dischi-json/backend/data/dischi.php")
+      .get("http://localhost/php-dischi-json/backend/data/get-dischi-list.php")
       .then((response) => {
         this.listDischi = response.data;
         console.log(this.listDischi);
